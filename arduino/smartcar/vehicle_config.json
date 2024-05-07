@@ -1,0 +1,111 @@
+{
+    "from_scratch": true, 
+    "vehicle": "PocketParkingVehicle",
+    "slots": {
+        "Front": {
+           "class": "AnalogRaycast",
+           "name": "Front Infrared"
+        },
+        "Front2": {
+           "class": "Camera",
+           "name": "Front Camera",
+           "props":{
+              "pins": [10, 1, 0, 2, 3, 5, 6, 4],
+              "far": 1000,
+              "rotation_degrees": "Vector3(-10,0,0)"
+           }
+        },
+        "360Camera": {
+          "class": "Camera",
+          "name": "Birdseye",
+          "props": {
+            "pins": [9, 1, 0, 2, 4, 7, 3, 5]
+          }
+        },
+        "FrontTop": {
+           "class": "UltraSonic",
+           "name": "Front UltraSonic",
+           "props": {
+              "trigger_pin": 12,
+              "echo_pin": 7,
+              "rotation_degrees": "Vector3(4,0,0)"
+           }
+        },
+        "Left": {
+           "class": "AnalogRaycast",
+           "name": "Left Infrared",
+           "props": {
+              "pin": 1
+           }
+        },
+        "Right": {
+           "class": "AnalogRaycast",
+           "name": "Right Infrared",
+           "props": {
+              "pin": 2
+           }
+        },
+        "Back": {
+           "class": "AnalogRaycast",
+           "name": "Back Infrared",
+           "props": {
+              "pin": 3
+           }
+        },
+         "LeftFront":{
+            "class": "AnalogRaycast",
+            "name": "Front Left Infrared",
+            "props":  {
+               "pin": 4,
+               "rotation_degrees": "Vector3(0,30,0)"
+            }
+         },
+         "RightFront":{
+            "class": "AnalogRaycast",
+            "name": "Front Right Infrared",
+            "props": {
+               "pin": 5,
+               "rotation_degrees": "Vector3(0,-30,0)"
+            }
+         },
+        "RightBack":{
+          "class": "AnalogRaycast",
+          "name": "Back Right Infrared",
+          "props": {
+            "pin": 0,
+            "rotation_degrees": "Vector3(0,110,0)"
+            }
+         },
+        "LeftBack":{
+          "class": "AnalogRaycast",
+          "name": "Back Left Infrared",
+          "props": {
+            "pin": 6,
+            "rotation_degrees": "Vector3(0,-110,0)"
+         }
+      }
+     },
+     "builtin": {
+        "Left BrushedMotor": {
+           "forward_pin": 12,
+           "backward_pin": 14,
+           "enable_pin": 13
+        },
+        "Right BrushedMotor": {
+           "forward_pin": 25,
+           "backward_pin": 26,
+           "enable_pin": 27
+        },
+        "Gyroscope" : {
+           "pin": 205
+        },
+        "Left Odometer": {
+           "distance_pin": 35,
+           "direction_pin": 34
+        },
+        "Right Odometer": {
+           "distance_pin": 36,
+           "direction_pin": 39
+        }
+    }
+}
